@@ -1,0 +1,69 @@
+[debug] [2025-04-14T18:31:15.956Z] ----------------------------------------------------------------------
+[debug] [2025-04-14T18:31:15.959Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-04-14T18:31:15.960Z] CLI Version:   14.1.0
+[debug] [2025-04-14T18:31:15.960Z] Platform:      win32
+[debug] [2025-04-14T18:31:15.960Z] Node Version:  v20.19.0
+[debug] [2025-04-14T18:31:15.960Z] Time:          Mon Apr 14 2025 20:31:15 GMT+0200 (Mitteleuropäische Sommerzeit)
+[debug] [2025-04-14T18:31:15.960Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-14T18:31:16.250Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-14T18:31:16.251Z] > authorizing via signed-in user (mihaeldraz10@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\mihae\Desktop\Developer Akademie Projekte\Angular\simple-crm
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-04-14T18:31:21.884Z] Using project from CLI flag: simple-crm-3f4f3
+[debug] [2025-04-14T18:31:21.885Z] Checked if tokens are valid: true, expires at: 1744657838541
+[debug] [2025-04-14T18:31:21.886Z] Checked if tokens are valid: true, expires at: 1744657838541
+[debug] [2025-04-14T18:31:21.887Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/simple-crm-3f4f3 [none]
+[debug] [2025-04-14T18:31:22.256Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/simple-crm-3f4f3 200
+[debug] [2025-04-14T18:31:22.256Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/simple-crm-3f4f3 {"projectId":"simple-crm-3f4f3","projectNumber":"120382481188","displayName":"Simple-CRM","name":"projects/simple-crm-3f4f3","resources":{"hostingSite":"simple-crm-3f4f3","realtimeDatabaseInstance":"simple-crm-3f4f3-default-rtdb"},"state":"ACTIVE","etag":"1_6a52b3d6-98a0-439c-ab11-927e31f3cc9e"}
+[info] i  Using project simple-crm-3f4f3 (Simple-CRM) 
+[info] 
+=== Firestore Setup
+[debug] [2025-04-14T18:31:22.265Z] Checked if tokens are valid: true, expires at: 1744657838541
+[debug] [2025-04-14T18:31:22.265Z] Checked if tokens are valid: true, expires at: 1744657838541
+[debug] [2025-04-14T18:31:22.265Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/simple-crm-3f4f3/services/firestore.googleapis.com [none]
+[debug] [2025-04-14T18:31:22.265Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/simple-crm-3f4f3/services/firestore.googleapis.com x-goog-quota-user=projects/simple-crm-3f4f3
+[debug] [2025-04-14T18:31:23.183Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/simple-crm-3f4f3/services/firestore.googleapis.com 200
+[debug] [2025-04-14T18:31:23.183Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/simple-crm-3f4f3/services/firestore.googleapis.com [omitted]
+[debug] [2025-04-14T18:31:23.183Z] Checked if tokens are valid: true, expires at: 1744657838541
+[debug] [2025-04-14T18:31:23.183Z] Checked if tokens are valid: true, expires at: 1744657838541
+[debug] [2025-04-14T18:31:23.184Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/simple-crm-3f4f3/databases/(default) [none]
+[debug] [2025-04-14T18:31:23.526Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/simple-crm-3f4f3/databases/(default) 200
+[debug] [2025-04-14T18:31:23.526Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/simple-crm-3f4f3/databases/(default) {"name":"projects/simple-crm-3f4f3/databases/(default)","uid":"66badf4a-0c57-4483-94ac-6bf969c73176","createTime":"2025-04-14T18:31:00.178432Z","updateTime":"2025-04-14T18:31:00.178432Z","locationId":"eur3","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2025-04-14T18:31:00.178432Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"e","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","databaseEdition":"STANDARD","freeTier":true,"etag":"IMDSuZKU2IwDMIC01oeU2IwD"}
+[debug] [2025-04-14T18:31:23.526Z] database_type: FIRESTORE_NATIVE
+[debug] [2025-04-14T18:31:23.526Z] database_type: FIRESTORE_NATIVE
+[debug] [2025-04-14T18:31:23.526Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-14T18:31:23.526Z] > authorizing via signed-in user (mihaeldraz10@gmail.com)
+[debug] [2025-04-14T18:31:23.526Z] [iam] checking project simple-crm-3f4f3 for permissions ["firebase.projects.get"]
+[debug] [2025-04-14T18:31:23.527Z] Checked if tokens are valid: true, expires at: 1744657838541
+[debug] [2025-04-14T18:31:23.527Z] Checked if tokens are valid: true, expires at: 1744657838541
+[debug] [2025-04-14T18:31:23.527Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/simple-crm-3f4f3:testIamPermissions [none]
+[debug] [2025-04-14T18:31:23.527Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/simple-crm-3f4f3:testIamPermissions x-goog-quota-user=projects/simple-crm-3f4f3
+[debug] [2025-04-14T18:31:23.527Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/simple-crm-3f4f3:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-04-14T18:31:23.851Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/simple-crm-3f4f3:testIamPermissions 200
+[debug] [2025-04-14T18:31:23.851Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/simple-crm-3f4f3:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
