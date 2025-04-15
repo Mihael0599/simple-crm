@@ -1,4 +1,3 @@
-import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { collection, collectionData, Firestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
@@ -13,7 +12,8 @@ export class AppComponent {
   items$: Observable<any[]>;
 
   constructor() {
-    const aCollection = collection(this.firestore, 'items')
+    const aCollection = collection(this.firestore, 'users')
     this.items$ = collectionData(aCollection);
+    console.log(aCollection);
   }
 }

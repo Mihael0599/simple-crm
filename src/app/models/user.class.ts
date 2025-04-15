@@ -4,6 +4,7 @@ export class User {
     firstName: string;
     lastName: string;
     birthDate: number;
+    /* email: string; */
     street: string;
     zipCode: number;
     city: string;
@@ -22,6 +23,7 @@ export class User {
             firstName: this.firstName,
             lastName: this.lastName,
             birthDate: this.birthDate,
+            /* email: this.email, */
             street: this.street,
             zipCode: this.zipCode,
             city: this.city,

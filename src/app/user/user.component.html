@@ -1,14 +1,14 @@
-<mat-card>
+<mat-card *ngIf="allUsers$ | async as users">
     <table class="user-table">
         <tr>
             <th>Name</th>
             <th>E-Mail</th>
             <th>City</th>
         </tr>
-        <tr>
-            <td>asd</td>
-            <td>asd</td>
-            <td>asd</td>
+        <tr *ngFor="let user of users">
+            <td>{{user.firstName}} {{user.lastName}}</td>
+            <td>{{user.emial}}</td>
+            <td>{{user.city}}</td>
         </tr>
     </table>
 </mat-card>

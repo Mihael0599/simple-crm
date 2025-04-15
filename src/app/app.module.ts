@@ -16,15 +16,8 @@ import { DateAdapter, MAT_DATE_FORMATS, MAT_NATIVE_DATE_FORMATS, NativeDateAdapt
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { MatCardModule } from '@angular/material/card';
+import { Config } from './config'
 
-const firebase = {
-  apiKey: "AIzaSyD8ryrCC9rgXVfq8sXcEF5RBqCTpk3R0Ng",
-  authDomain: "simple-crm-3f4f3.firebaseapp.com",
-  projectId: "simple-crm-3f4f3",
-  storageBucket: "simple-crm-3f4f3.firebasestorage.app",
-  messagingSenderId: "120382481188",
-  appId: "1:120382481188:web:2eeadef68e5bd3b355c9b1"
-};
 
 @NgModule({
   declarations: [
@@ -43,7 +36,7 @@ const firebase = {
     MatTooltipModule,
     MatDialogModule,
     MatCardModule,
-    provideFirebaseApp(() => initializeApp(firebase)),
+    provideFirebaseApp(() => initializeApp(Config)),
     provideFirestore(() => getFirestore()),
   ],
   providers: [ {provide: DateAdapter, useClass: NativeDateAdapter}, {provide: MAT_DATE_FORMATS, useValue: MAT_NATIVE_DATE_FORMATS}, ],
