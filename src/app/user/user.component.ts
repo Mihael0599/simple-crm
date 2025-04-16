@@ -19,7 +19,9 @@ ngOnInit() {
   const usersRef = collection(this.firestore, 'users');
   this.allUsers$ = collectionData(usersRef, { idField: 'id' });
 }
-
+openDetails(id: string){
+  console.log('Ausgewählte ID:', id);
+}
  openDialog(){
   this.dialog.open(DialogAddUserComponent)
  }
