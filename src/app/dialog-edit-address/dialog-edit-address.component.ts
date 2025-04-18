@@ -10,7 +10,7 @@ import { doc, Firestore, getDoc, updateDoc } from '@angular/fire/firestore';
 })
 export class DialogEditAddressComponent {
 
-user: User;
+user: User = new User();
 userId: string;
 loading: boolean = false;
 

@@ -11,7 +11,7 @@ import { doc, Firestore, getDoc, updateDoc } from '@angular/fire/firestore';
 })
 export class DialogEditUserComponent {
 
-user: User; //speichert den User aus Firebase. Es kommt aus user-detail.componnent weil ich mir von dort die Daten aus Firebase hole
+user: User = new User(); //speichert den User aus Firebase. Es kommt aus user-detail.componnent weil ich mir von dort die Daten aus Firebase hole
 loading: boolean = false;
 birthDate: Date;
 userId: string;
