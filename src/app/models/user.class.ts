@@ -1,5 +1,3 @@
-import { last, zip } from "rxjs";
-
 export class User {
     firstName: string;
     lastName: string;
@@ -10,13 +8,15 @@ export class User {
     city: string;
 
     constructor(obj?: any) {
-        this.firstName = obj ? obj.firstName : '';
-        this.lastName = obj ? obj.firstName : '';
-        this.birthDate = obj ? obj.firstName : '';
-        this.street = obj ? obj.firstName : '';
-        this.zipCode = obj ? obj.firstName : '';
-        this.city = obj ? obj.firstName : '';
+        this.firstName = obj?.firstName || '';
+        this.lastName = obj?.lastName || '';
+        this.birthDate = obj?.birthDate || 0;
+        this.email = obj?.email || '';
+        this.street = obj?.street || '';
+        this.zipCode = obj?.zipCode || 0;
+        this.city = obj?.city || '';
     }
+    
 
     public toJSON() {
         return {

@@ -7,7 +7,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { User } from '../models/user.class';
 import { FormsModule } from '@angular/forms'
-import { addDoc, collection, collectionData, Firestore } from '@angular/fire/firestore';
+import { addDoc, collection, Firestore } from '@angular/fire/firestore';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { NgIf } from '@angular/common';
 
@@ -16,19 +16,7 @@ import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-dialog-add-user',
   templateUrl: './dialog-add-user.component.html',
-  standalone: true,
   styleUrls: ['./dialog-add-user.component.scss'],
-  imports: [
-    MatButtonModule,
-    MatDialogModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    FormsModule,
-    MatProgressBarModule,
-    NgIf,
-  ],
 })
 export class DialogAddUserComponent {
 
@@ -39,19 +27,13 @@ export class DialogAddUserComponent {
   firestore: Firestore = inject(Firestore);
   loading: boolean = false;
 
-  closeDialog() {
-    this.dialog.close();
-  }
-
   saveUser() {
     this.user.birthDate = this.birthDate.getTime();
-
     const usersCollection = collection(this.firestore, 'users');
     this.loading = true;
     addDoc(usersCollection, this.user.toJSON())
-      .then((result) => {
+      .then(() => {
         this.loading = false;
-        console.log('User gespeichert mit ID:', result.id);
         this.dialog.close();
       })
       .catch((error) => {
